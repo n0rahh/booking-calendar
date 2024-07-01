@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Tool Test</title>
+</head>
+<body>
+    <div id="calendar-container"></div>
+    <script src="dist/bundle.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendar = new Calendar({
+                backgroundColor: '#ff5722',
+                buttonColor: '#cddc39',
+                buttonHoverColor: '#9e9d24',
+                hoverColor: '#ffccbc',
+                availableHours: ['09:00', '10:00', '11:00', '12:00'],
+                options: [
+                    { value: 'family', label: 'Family dome' },
+                    { value: 'single', label: 'Single dome' }
+                ],
+                guests: [
+                    { value: 1, label: '1 Guest' },
+                    { value: 2, label: '2 Guests' },
+                    { value: 3, label: '3 Guests' },
+                    { value: 4, label: '4 Guests' },
+                    { value: 5, label: '5 Guests' },
+                    { value: 6, label: '6 Guests' }
+                ],
+                containerId: 'calendar-container'
+            });
+        });
+    </script>
+</body>
+</html>
